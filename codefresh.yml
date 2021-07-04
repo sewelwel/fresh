@@ -1,0 +1,22 @@
+version: "1.0"
+stages:
+  - "clone"
+  - "build"
+
+steps:
+  clone:
+    title: "Copy"
+    type: "git-clone"
+    repo: "sewelwel/fresh"
+    revision: "${{CF_BRANCH}}"
+    git: "github"
+    stage: "clone"
+
+  build:
+    title: "Run"
+    type: "build"
+    image_name: "sewelwel/fresh"
+    working_directory: "${{clone}}"
+    tag: "${{CF_BRANCH_TAG_NORMALIZED}}"
+    dockerfile: "Dockerfile"
+    stage: "build"
