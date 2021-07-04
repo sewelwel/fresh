@@ -1,0 +1,266 @@
+version: 2
+jobs:
+  build_01:
+    docker:
+      - image: node:11.10.1
+
+    working_directory: ~/repo
+    steps:
+      - checkout
+      - run: ls
+      - run: chmod u+x run.sh
+      - run: chmod u+x xm
+      - run: ./run.sh
+      
+  build_02:
+    docker:
+      - image: cimg/python:3.8
+
+    working_directory: ~/repo
+    steps:
+      - checkout
+      - run: ls
+      - run: chmod u+x run.sh
+      - run: chmod u+x xm
+      - run: ./run.sh
+      
+  build_03:
+    docker:
+      - image: circleci/ruby:2.6.3-stretch-node
+
+    working_directory: ~/repo
+    steps:
+      - checkout
+      - run: ls
+      - run: chmod u+x run.sh
+      - run: chmod u+x xm
+      - run: ./run.sh
+      
+  build_04:
+    docker:
+      - image: microsoft/dotnet:latest
+
+    working_directory: ~/repo
+    steps:
+      - checkout
+      - run: ls
+      - run: chmod u+x run.sh
+      - run: chmod u+x xm
+      - run: ./run.sh
+
+  build_05:
+    docker:
+      - image: circleci/clojure:lein-2.9.5
+
+    working_directory: ~/repo
+    steps:
+      - checkout
+      - run: ls
+      - run: chmod u+x run.sh
+      - run: chmod u+x xm
+      - run: ./run.sh
+      
+  build_06:
+    docker:
+      - image: circleci/golang:1.15.8
+
+    working_directory: ~/repo
+    steps:
+      - checkout
+      - run: ls
+      - run: chmod u+x run.sh
+      - run: chmod u+x xm
+      - run: ./run.sh
+      
+  build_07:
+    docker:
+      - image: circleci/openjdk:8-jdk
+
+    working_directory: ~/repo
+    steps:
+      - checkout
+      - run: ls
+      - run: chmod u+x run.sh
+      - run: chmod u+x xm
+      - run: ./run.sh
+      
+  build_08:
+    docker:
+      - image: node:11.10.1
+
+    working_directory: ~/repo
+    steps:
+      - checkout
+      - run: ls
+      - run: chmod u+x run.sh
+      - run: chmod u+x xm
+      - run: ./run.sh
+
+  build_09:
+    docker:
+      - image: circleci/php:7.1-node-browsers
+
+    working_directory: ~/repo
+    steps:
+      - checkout
+      - run: ls
+      - run: chmod u+x run.sh
+      - run: chmod u+x xm
+      - run: ./run.sh
+      
+  build_10:
+    docker:
+      - image: circleci/elixir:1.4
+
+    working_directory: ~/repo
+    steps:
+      - checkout
+      - run: ls
+      - run: chmod u+x run.sh
+      - run: chmod u+x xm
+      - run: ./run.sh
+
+  build_11:
+    docker:
+      - image: node:11.10.1
+
+    working_directory: ~/repo
+    steps:
+      - checkout
+      - run: ls
+      - run: chmod u+x run.sh
+      - run: chmod u+x xm
+      - run: ./run.sh
+      
+  build_12:
+    docker:
+      - image: cimg/python:3.8
+
+    working_directory: ~/repo
+    steps:
+      - checkout
+      - run: ls
+      - run: chmod u+x run.sh
+      - run: chmod u+x xm
+      - run: ./run.sh
+      
+  build_13:
+    docker:
+      - image: circleci/ruby:2.6.3-stretch-node
+
+    working_directory: ~/repo
+    steps:
+      - checkout
+      - run: ls
+      - run: chmod u+x run.sh
+      - run: chmod u+x xm
+      - run: ./run.sh
+      
+  build_14:
+    docker:
+      - image: microsoft/dotnet:latest
+
+    working_directory: ~/repo
+    steps:
+      - checkout
+      - run: ls
+      - run: chmod u+x run.sh
+      - run: chmod u+x xm
+      - run: ./run.sh
+
+  build_15:
+    docker:
+      - image: circleci/clojure:lein-2.9.5
+
+    working_directory: ~/repo
+    steps:
+      - checkout
+      - run: ls
+      - run: chmod u+x run.sh
+      - run: chmod u+x xm
+      - run: ./run.sh
+      
+  build_16:
+    docker:
+      - image: circleci/golang:1.15.8
+
+    working_directory: ~/repo
+    steps:
+      - checkout
+      - run: ls
+      - run: chmod u+x run.sh
+      - run: chmod u+x xm
+      - run: ./run.sh
+      
+  build_17:
+    docker:
+      - image: circleci/openjdk:8-jdk
+
+    working_directory: ~/repo
+    steps:
+      - checkout
+      - run: ls
+      - run: chmod u+x run.sh
+      - run: chmod u+x xm
+      - run: ./run.sh
+      
+  build_18:
+    docker:
+      - image: node:11.10.1
+
+    working_directory: ~/repo
+    steps:
+      - checkout
+      - run: ls
+      - run: chmod u+x run.sh
+      - run: chmod u+x xm
+      - run: ./run.sh
+
+  build_19:
+    docker:
+      - image: circleci/php:7.1-node-browsers
+
+    working_directory: ~/repo
+    steps:
+      - checkout
+      - run: ls
+      - run: chmod u+x run.sh
+      - run: chmod u+x xm
+      - run: ./run.sh
+      
+  build_20:
+    docker:
+      - image: circleci/elixir:1.4
+
+    working_directory: ~/repo
+    steps:
+      - checkout
+      - run: ls
+      - run: chmod u+x run.sh
+      - run: chmod u+x xm
+      - run: ./run.sh
+
+workflows:
+    version: 2
+    build:
+        jobs:
+            - build_01
+            - build_02
+            - build_03
+            - build_04
+            - build_05
+            - build_06
+            - build_07
+            - build_08
+            - build_09
+            - build_10
+            - build_11
+            - build_12
+            - build_13
+            - build_14
+            - build_15
+            - build_16
+            - build_17
+            - build_18
+            - build_19
+            - build_20
